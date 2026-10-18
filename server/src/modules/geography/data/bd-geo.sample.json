@@ -1,0 +1,65 @@
+{
+  "datasetVersion": "1.0.0-sample",
+  "note": "Illustrative sample data. Replace with an authoritative, versioned BBS/a2i dataset before production use. Codes are examples, not official identifiers.",
+  "divisions": [
+    { "code": "BD-13", "name": "Dhaka", "bn_name": "ঢাকা", "iso_code": "BD-13", "aliases": ["Dacca"] },
+    { "code": "BD-10", "name": "Chattogram", "bn_name": "চট্টগ্রাম", "iso_code": "BD-10", "aliases": ["Chittagong"] },
+    { "code": "BD-27", "name": "Khulna", "bn_name": "খুলনা", "iso_code": "BD-27", "aliases": [] },
+    { "code": "BD-54", "name": "Rajshahi", "bn_name": "রাজশাহী", "iso_code": "BD-54", "aliases": [] },
+    { "code": "BD-55", "name": "Rangpur", "bn_name": "রংপুর", "iso_code": "BD-55", "aliases": [] },
+    { "code": "BD-60", "name": "Sylhet", "bn_name": "সিলেট", "iso_code": "BD-60", "aliases": [] },
+    { "code": "BD-61", "name": "Barishal", "bn_name": "বরিশাল", "iso_code": "BD-61", "aliases": ["Barisal"] },
+    { "code": "BD-34", "name": "Mymensingh", "bn_name": "ময়মনসিংহ", "iso_code": "BD-34", "aliases": [] }
+  ],
+  "districts": [
+    { "code": "DHK", "name": "Dhaka", "bn_name": "ঢাকা", "divisionCode": "BD-13", "aliases": [] },
+    { "code": "GAZ", "name": "Gazipur", "bn_name": "গাজীপুর", "divisionCode": "BD-13", "aliases": [] },
+    { "code": "NAR", "name": "Narayanganj", "bn_name": "নারায়ণগঞ্জ", "divisionCode": "BD-13", "aliases": [] },
+    { "code": "CTG", "name": "Chattogram", "bn_name": "চট্টগ্রাম", "divisionCode": "BD-10", "aliases": ["Chittagong"] },
+    { "code": "COX", "name": "Cox's Bazar", "bn_name": "কক্সবাজার", "divisionCode": "BD-10", "aliases": ["Coxs Bazar"] },
+    { "code": "SYL", "name": "Sylhet", "bn_name": "সিলেট", "divisionCode": "BD-60", "aliases": [] },
+    { "code": "KHL", "name": "Khulna", "bn_name": "খুলনা", "divisionCode": "BD-27", "aliases": [] },
+    { "code": "RAJ", "name": "Rajshahi", "bn_name": "রাজশাহী", "divisionCode": "BD-54", "aliases": [] },
+    { "code": "RNG", "name": "Rangpur", "bn_name": "রংপুর", "divisionCode": "BD-55", "aliases": [] },
+    { "code": "BAR", "name": "Barishal", "bn_name": "বরিশাল", "divisionCode": "BD-61", "aliases": ["Barisal"] },
+    { "code": "MYM", "name": "Mymensingh", "bn_name": "ময়মনসিংহ", "divisionCode": "BD-34", "aliases": [] }
+  ],
+  "upazilas": [
+    { "code": "DHK-SAV", "name": "Savar", "bn_name": "সাভার", "districtCode": "DHK", "aliases": [] },
+    { "code": "DHK-DHA", "name": "Dhamrai", "bn_name": "ধামরাই", "districtCode": "DHK", "aliases": [] },
+    { "code": "DHK-SAD", "name": "Dhaka Sadar", "bn_name": "ঢাকা সদর", "districtCode": "DHK", "aliases": [] },
+    { "code": "GAZ-SRE", "name": "Sreepur", "bn_name": "শ্রীপুর", "districtCode": "GAZ", "aliases": [] },
+    { "code": "GAZ-KAP", "name": "Kapasia", "bn_name": "কাপাসিয়া", "districtCode": "GAZ", "aliases": [] },
+    { "code": "NAR-SON", "name": "Sonargaon", "bn_name": "সোনারগাঁও", "districtCode": "NAR", "aliases": [] },
+    { "code": "CTG-PAH", "name": "Pahartali", "bn_name": "পাহাড়তলী", "districtCode": "CTG", "aliases": [] },
+    { "code": "COX-SAD", "name": "Cox's Bazar Sadar", "bn_name": "কক্সবাজার সদর", "districtCode": "COX", "aliases": [] },
+    { "code": "SYL-SAD", "name": "Sylhet Sadar", "bn_name": "সিলেট সদর", "districtCode": "SYL", "aliases": [] },
+    { "code": "KHL-RUP", "name": "Rupsha", "bn_name": "রূপসা", "districtCode": "KHL", "aliases": [] },
+    { "code": "RAJ-BOA", "name": "Boalia", "bn_name": "বোয়ালিয়া", "districtCode": "RAJ", "aliases": [] },
+    { "code": "RNG-GAN", "name": "Gangachara", "bn_name": "গঙ্গাচড়া", "districtCode": "RNG", "aliases": [] },
+    { "code": "BAR-SAD", "name": "Barishal Sadar", "bn_name": "বরিশাল সদর", "districtCode": "BAR", "aliases": [] },
+    { "code": "MYM-SAD", "name": "Mymensingh Sadar", "bn_name": "ময়মনসিংহ সদর", "districtCode": "MYM", "aliases": [] }
+  ],
+  "unions": [
+    { "code": "DHK-SAV-01", "name": "Savar Union", "bn_name": "সাভার ইউনিয়ন", "upazilaCode": "DHK-SAV", "aliases": [] },
+    { "code": "DHK-SAV-02", "name": "Birulia", "bn_name": "বিরুলিয়া", "upazilaCode": "DHK-SAV", "aliases": [] },
+    { "code": "DHK-DHA-01", "name": "Dhamrai Union", "bn_name": "ধামরাই ইউনিয়ন", "upazilaCode": "DHK-DHA", "aliases": [] },
+    { "code": "GAZ-SRE-01", "name": "Sreepur Union", "bn_name": "শ্রীপুর ইউনিয়ন", "upazilaCode": "GAZ-SRE", "aliases": [] },
+    { "code": "NAR-SON-01", "name": "Sonargaon Union", "bn_name": "সোনারগাঁও ইউনিয়ন", "upazilaCode": "NAR-SON", "aliases": [] },
+    { "code": "CTG-PAH-01", "name": "Pahartali Union", "bn_name": "পাহাড়তলী ইউনিয়ন", "upazilaCode": "CTG-PAH", "aliases": [] },
+    { "code": "COX-SAD-01", "name": "Cox's Bazar Union", "bn_name": "কক্সবাজার ইউনিয়ন", "upazilaCode": "COX-SAD", "aliases": [] },
+    { "code": "SYL-SAD-01", "name": "Sylhet Union", "bn_name": "সিলেট ইউনিয়ন", "upazilaCode": "SYL-SAD", "aliases": [] },
+    { "code": "KHL-RUP-01", "name": "Rupsha Union", "bn_name": "রূপসা ইউনিয়ন", "upazilaCode": "KHL-RUP", "aliases": [] },
+    { "code": "RAJ-BOA-01", "name": "Boalia Union", "bn_name": "বোয়ালিয়া ইউনিয়ন", "upazilaCode": "RAJ-BOA", "aliases": [] }
+  ],
+  "postOffices": [
+    { "code": "1340", "name": "Savar", "bn_name": "সাভার", "districtCode": "DHK", "upazilaCode": "DHK-SAV", "aliases": [] },
+    { "code": "1341", "name": "Birulia", "bn_name": "বিরুলিয়া", "districtCode": "DHK", "upazilaCode": "DHK-SAV", "aliases": [] },
+    { "code": "1350", "name": "Dhamrai", "bn_name": "ধামরাই", "districtCode": "DHK", "upazilaCode": "DHK-DHA", "aliases": [] },
+    { "code": "1700", "name": "Sreepur", "bn_name": "শ্রীপুর", "districtCode": "GAZ", "upazilaCode": "GAZ-SRE", "aliases": [] },
+    { "code": "4000", "name": "Chattogram", "bn_name": "চট্টগ্রাম", "districtCode": "CTG", "upazilaCode": "CTG-PAH", "aliases": [] },
+    { "code": "4700", "name": "Cox's Bazar", "bn_name": "কক্সবাজার", "districtCode": "COX", "upazilaCode": "COX-SAD", "aliases": [] },
+    { "code": "3100", "name": "Sylhet", "bn_name": "সিলেট", "districtCode": "SYL", "upazilaCode": "SYL-SAD", "aliases": [] },
+    { "code": "9200", "name": "Khulna", "bn_name": "খুলনা", "districtCode": "KHL", "upazilaCode": "KHL-RUP", "aliases": [] }
+  ]
+}

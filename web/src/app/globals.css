@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans:
+        ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Bengali", sans-serif;
+    --font-mono:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    body {
+        @apply bg-slate-50 font-sans text-slate-900 antialiased;
+        overflow-x: hidden;
+    }
+
+    @supports (overflow-x: clip) {
+        html,
+        body {
+            overflow-x: clip;
+        }
+    }
+
+    ::selection {
+        @apply bg-emerald-200 text-emerald-950;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
