@@ -1,36 +1,22 @@
 services:
-  mongo:
-    image: mongo:7
-    restart: unless-stopped
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-
   redis:
     image: redis:7-alpine
     restart: unless-stopped
-    ports:
-      - "6379:6379"
 
   app:
     build: ./server
     restart: unless-stopped
     depends_on:
-      - mongo
       - redis
     environment:
       NODE_ENV: production
       PORT: 4000
-      MONGODB_URL: mongodb://mongo:27017/bd_geo
+      MONGODB_URL: ${MONGODB_URL:?Set MONGODB_URL in server/.env}
       REDIS_URL: redis://redis:6379
-      ADMIN_API_KEY: ${ADMIN_API_KEY:-change-me-to-a-long-random-secret}
+      ADMIN_API_KEY: ${ADMIN_API_KEY:?Set ADMIN_API_KEY in server/.env}
       CORS_ORIGINS: ${CORS_ORIGINS:-*}
       DATASET_VERSION: ${DATASET_VERSION:-1.0.0}
       OTEL_ENABLED: ${OTEL_ENABLED:-false}
       OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME:-bd-geo-service}
     ports:
       - "4000:4000"
-
-volumes:
-  mongo-data:
