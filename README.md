@@ -60,28 +60,28 @@ npm test
 
 See `server/.env.example`. The service refuses to start if the environment is invalid. `ADMIN_API_KEY` is mandatory when `NODE_ENV=production` and must be at least 16 characters.
 
-| Variable | Default | Purpose |
-| --- | --- | --- |
-| `NODE_ENV` | `development` | `development`, `test`, or `production` |
-| `PORT` | `4000` | HTTP port |
-| `MONGODB_URL` | required | MongoDB connection string |
-| `CORS_ORIGINS` | `*` | Comma-separated allowlist; use `*` only locally |
-| `ADMIN_API_KEY` | required in production | `x-api-key` or `Authorization: Bearer` for admin routes |
-| `MAX_JSON_SIZE` | `100kb` | JSON body limit |
-| `ADMIN_IMPORT_MAX_SIZE` | `5mb` | JSON body limit for `/api/v1/admin/import` |
-| `RATE_LIMIT_WINDOW_MS` | `60000` | Rate limit window |
-| `RATE_LIMIT_MAX` | `300` | Requests per window per IP |
-| `TRUST_PROXY` | `false` | Set to `true` behind a trusted proxy |
-| `LOG_LEVEL` | `info` | pino log level |
-| `DATASET_VERSION` | `1.0.0` | Fallback dataset version |
-| `METRICS_ENABLED` | `true` | Expose `/metrics` |
-| `METRICS_TOKEN` | unset | If set, `/metrics` requires `Authorization: Bearer <token>` |
-| `REDIS_URL` | unset | Enables shared rate limiting and cross-instance cache invalidation |
-| `REDIS_KEY_PREFIX` | `bd-geo` | Redis key namespace |
-| `CACHE_INVALIDATION_CHANNEL` | `bd-geo:cache:invalidate` | Pub/sub channel for snapshot invalidation |
-| `OTEL_ENABLED` | `false` | Enable OpenTelemetry tracing |
-| `OTEL_SERVICE_NAME` | `bd-geo-service` | `service.name` resource attribute |
-| `OTEL_EXPORTER_OTLP_ENDPOINT` | `http://localhost:4318` | OTLP/HTTP collector endpoint |
+| Variable                      | Default                   | Purpose                                                            |
+| ----------------------------- | ------------------------- | ------------------------------------------------------------------ |
+| `NODE_ENV`                    | `development`             | `development`, `test`, or `production`                             |
+| `PORT`                        | `4000`                    | HTTP port                                                          |
+| `MONGODB_URL`                 | required                  | MongoDB connection string                                          |
+| `CORS_ORIGINS`                | `*`                       | Comma-separated allowlist; use `*` only locally                    |
+| `ADMIN_API_KEY`               | required in production    | `x-api-key` or `Authorization: Bearer` for admin routes            |
+| `MAX_JSON_SIZE`               | `100kb`                   | JSON body limit                                                    |
+| `ADMIN_IMPORT_MAX_SIZE`       | `5mb`                     | JSON body limit for `/api/v1/admin/import`                         |
+| `RATE_LIMIT_WINDOW_MS`        | `60000`                   | Rate limit window                                                  |
+| `RATE_LIMIT_MAX`              | `300`                     | Requests per window per IP                                         |
+| `TRUST_PROXY`                 | `false`                   | Set to `true` behind a trusted proxy                               |
+| `LOG_LEVEL`                   | `info`                    | pino log level                                                     |
+| `DATASET_VERSION`             | `1.0.0`                   | Fallback dataset version                                           |
+| `METRICS_ENABLED`             | `true`                    | Expose `/metrics`                                                  |
+| `METRICS_TOKEN`               | unset                     | If set, `/metrics` requires `Authorization: Bearer <token>`        |
+| `REDIS_URL`                   | unset                     | Enables shared rate limiting and cross-instance cache invalidation |
+| `REDIS_KEY_PREFIX`            | `bd-geo`                  | Redis key namespace                                                |
+| `CACHE_INVALIDATION_CHANNEL`  | `bd-geo:cache:invalidate` | Pub/sub channel for snapshot invalidation                          |
+| `OTEL_ENABLED`                | `false`                   | Enable OpenTelemetry tracing                                       |
+| `OTEL_SERVICE_NAME`           | `bd-geo-service`          | `service.name` resource attribute                                  |
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | `http://localhost:4318`   | OTLP/HTTP collector endpoint                                       |
 
 ## Console UI
 
@@ -120,25 +120,25 @@ The Next.js rewrite forwards client addresses in `X-Forwarded-For`. Set `TRUST_P
 
 Base path: `/api/v1`
 
-| Method | Path | Description |
-| --- | --- | --- |
-| GET | `/divisions` | All divisions |
-| GET | `/divisions/:code` | One division |
-| GET | `/divisions/:code/districts` | Districts of a division |
-| GET | `/districts` | All districts |
-| GET | `/districts/:code` | One district |
-| GET | `/districts/:code/upazilas` | Upazilas of a district |
-| GET | `/upazilas` | All upazilas |
-| GET | `/upazilas/:code` | One upazila |
-| GET | `/upazilas/:code/unions` | Unions of an upazila |
-| GET | `/unions` | All unions |
-| GET | `/unions/:code` | One union |
-| GET | `/post-offices` | All post offices; filter with `districtCode` or `upazilaCode` |
-| GET | `/post-offices/:code` | One post office |
-| GET | `/hierarchy?depth=1..4` | Nested administrative tree |
-| GET | `/search?q=...&type=...&page=1&limit=20` | Search by name, Bangla name, alias, or code |
-| GET | `/meta/dataset` | Dataset version, import time, counts, and load status |
-| GET | `/openapi.json` | OpenAPI 3.0 document for the public and admin APIs |
+| Method | Path                                     | Description                                                   |
+| ------ | ---------------------------------------- | ------------------------------------------------------------- |
+| GET    | `/divisions`                             | All divisions                                                 |
+| GET    | `/divisions/:code`                       | One division                                                  |
+| GET    | `/divisions/:code/districts`             | Districts of a division                                       |
+| GET    | `/districts`                             | All districts                                                 |
+| GET    | `/districts/:code`                       | One district                                                  |
+| GET    | `/districts/:code/upazilas`              | Upazilas of a district                                        |
+| GET    | `/upazilas`                              | All upazilas                                                  |
+| GET    | `/upazilas/:code`                        | One upazila                                                   |
+| GET    | `/upazilas/:code/unions`                 | Unions of an upazila                                          |
+| GET    | `/unions`                                | All unions                                                    |
+| GET    | `/unions/:code`                          | One union                                                     |
+| GET    | `/post-offices`                          | All post offices; filter with `districtCode` or `upazilaCode` |
+| GET    | `/post-offices/:code`                    | One post office                                               |
+| GET    | `/hierarchy?depth=1..4`                  | Nested administrative tree                                    |
+| GET    | `/search?q=...&type=...&page=1&limit=20` | Search by name, Bangla name, alias, or code                   |
+| GET    | `/meta/dataset`                          | Dataset version, import time, counts, and load status         |
+| GET    | `/openapi.json`                          | OpenAPI 3.0 document for the public and admin APIs            |
 
 List endpoints accept optional `limit` (1-200) and `cursor` parameters. When `limit` is present, the response includes a `meta` object with `nextCursor`; pass it back as `cursor` to fetch the next page. Orders are deterministic by name and code.
 
@@ -175,11 +175,11 @@ Public responses are sent with `Cache-Control: public, max-age=300, stale-while-
 
 Base path: `/api/v1/admin`. Authenticate with `x-api-key: <ADMIN_API_KEY>`.
 
-| Method | Path | Description |
-| --- | --- | --- |
-| POST | `/import` | Idempotent hierarchical bulk upsert keyed by `code` |
-| PATCH | `/:resource/:code` | Update `name`, `bn_name`, `aliases`, or division `iso_code` |
-| POST | `/:resource/:code/deprecate` | Set `{"deprecated": true}` or restore with `false` |
+| Method | Path                         | Description                                                 |
+| ------ | ---------------------------- | ----------------------------------------------------------- |
+| POST   | `/import`                    | Idempotent hierarchical bulk upsert keyed by `code`         |
+| PATCH  | `/:resource/:code`           | Update `name`, `bn_name`, `aliases`, or division `iso_code` |
+| POST   | `/:resource/:code/deprecate` | Set `{"deprecated": true}` or restore with `false`          |
 
 `resource` is one of `divisions`, `districts`, `upazilas`, `unions`, `post-offices`.
 
@@ -190,9 +190,15 @@ The importer is idempotent and validates the entire payload before writing. Pare
 ```json
 {
   "datasetVersion": "1.0.0",
-  "note": "BBS administrative geography, retrieved 2026-01-15.",
+  "note": "Manually compiled and maintained by the project author.",
   "divisions": [
-    { "code": "BD-13", "name": "Dhaka", "bn_name": "ঢাকা", "iso_code": "BD-13", "aliases": ["Dacca"] }
+    {
+      "code": "BD-13",
+      "name": "Dhaka",
+      "bn_name": "ঢাকা",
+      "iso_code": "BD-13",
+      "aliases": ["Dacca"]
+    }
   ],
   "districts": [
     { "code": "D-13", "name": "Dhaka", "bn_name": "ঢাকা", "divisionCode": "BD-13", "aliases": [] }
@@ -201,10 +207,23 @@ The importer is idempotent and validates the entire payload before writing. Pare
     { "code": "U-0001", "name": "Savar", "bn_name": "সাভার", "districtCode": "D-13", "aliases": [] }
   ],
   "unions": [
-    { "code": "UN-0001", "name": "Savar Union", "bn_name": "সাভার ইউনিয়ন", "upazilaCode": "U-0001", "aliases": [] }
+    {
+      "code": "UN-0001",
+      "name": "Savar Union",
+      "bn_name": "সাভার ইউনিয়ন",
+      "upazilaCode": "U-0001",
+      "aliases": []
+    }
   ],
   "postOffices": [
-    { "code": "PO-0001", "name": "Savar", "bn_name": "সাভার", "districtCode": "D-13", "upazilaCode": "U-0001", "aliases": [] }
+    {
+      "code": "PO-0001",
+      "name": "Savar",
+      "bn_name": "সাভার",
+      "districtCode": "D-13",
+      "upazilaCode": "U-0001",
+      "aliases": []
+    }
   ]
 }
 ```
@@ -229,9 +248,21 @@ To build from local source files instead, point `BD_GEO_SOURCE_DIR` at the direc
 BD_GEO_SOURCE_DIR=./upstream-json npm run dataset:build -- ./src/modules/geography/data/bd-geo.json
 ```
 
-The smaller `server/src/modules/geography/data/bd-geo.sample.json` remains as a deterministic fixture for tests. Dataset command paths are resolved from `server/`, so prefix a path with `../` to reference files outside that folder. Codes are the identity of a record, so duplicate names under the same parent are allowed where the source data contains them.
+The smaller `server/src/modules/geography/data/bd-geo.sample.json`
+is a fixed sample dataset used for repeatable tests.
 
-Verify the community dataset against an authoritative BBS/a2i release and review licensing before production use.
+Dataset command paths are resolved from `server/`, so prefix a path
+with `../` to reference files outside that folder.
+
+Each record is identified by its unique code. Records under the same
+parent may share a name as long as their codes are different.
+
+This dataset is manually compiled and maintained by the project author.
+It includes 8 divisions, 64 districts, 544 upazilas, and 4,540 unions.
+Postal codes are not included.
+
+Administrative names and boundaries may change. Verify current details
+before production use. This project is not an official government service.
 
 ## Scaling with Redis
 
@@ -334,3 +365,10 @@ server/scripts/dev.mjs                  development orchestrator (Mongo, seed, A
 server/tests/                           unit and integration tests
 web/                                    Next.js 16 console (App Router, TypeScript, React 19, Tailwind 4)
 ```
+
+## License
+
+The original code and author-created datasets in this repository are
+licensed under the ISC License. See [LICENSE](./LICENSE).
+
+Third-party dependencies remain subject to their respective licenses.

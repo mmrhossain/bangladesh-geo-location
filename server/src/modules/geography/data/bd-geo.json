@@ -1,15 +1,12 @@
 {
-  "datasetVersion": "2023-03-17-5622f68",
-  "note": "Community dataset derived from public sources. Postal codes are not included. Verify against an authoritative BBS/a2i release before production use.",
+  "datasetVersion": "1.0.0",
+  "note": "Manually compiled and maintained by the project author. Postal codes are not included. Administrative names and boundaries may change; verify current details before production use.",
   "divisions": [
     {
       "code": "BD-10",
       "name": "Chattogram",
       "bn_name": "চট্টগ্রাম",
-      "aliases": [
-        "Chattagram",
-        "Chittagong"
-      ],
+      "aliases": ["Chattagram", "Chittagong"],
       "iso_code": "BD-10"
     },
     {
@@ -30,9 +27,7 @@
       "code": "BD-61",
       "name": "Barishal",
       "bn_name": "বরিশাল",
-      "aliases": [
-        "Barisal"
-      ],
+      "aliases": ["Barisal"],
       "iso_code": "BD-61"
     },
     {
@@ -46,9 +41,7 @@
       "code": "BD-13",
       "name": "Dhaka",
       "bn_name": "ঢাকা",
-      "aliases": [
-        "Dacca"
-      ],
+      "aliases": ["Dacca"],
       "iso_code": "BD-13"
     },
     {
@@ -71,9 +64,7 @@
       "code": "D-01",
       "name": "Cumilla",
       "bn_name": "কুমিল্লা",
-      "aliases": [
-        "Comilla"
-      ],
+      "aliases": ["Comilla"],
       "divisionCode": "BD-10"
     },
     {
@@ -129,10 +120,7 @@
       "code": "D-09",
       "name": "Cox's Bazar",
       "bn_name": "কক্সবাজার",
-      "aliases": [
-        "Coxsbazar",
-        "Coxs Bazar"
-      ],
+      "aliases": ["Coxsbazar", "Coxs Bazar"],
       "divisionCode": "BD-10"
     },
     {
@@ -279,9 +267,7 @@
       "code": "D-30",
       "name": "Jhalokathi",
       "bn_name": "ঝালকাঠি",
-      "aliases": [
-        "Jhalakathi"
-      ],
+      "aliases": ["Jhalakathi"],
       "divisionCode": "BD-61"
     },
     {
@@ -519,9 +505,7 @@
       "code": "D-64",
       "name": "Netrokona",
       "bn_name": "নেত্রকোণা",
-      "aliases": [
-        "Netrakona"
-      ],
+      "aliases": ["Netrakona"],
       "divisionCode": "BD-34"
     }
   ],
